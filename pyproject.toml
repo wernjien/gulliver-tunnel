@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gulliver-tunnel"
+version = "1.1.0"
+description = "Like Doraemon's Gulliver Tunnel, it shrinks every image in a folder to fit your size, and never makes anything bigger."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["Pillow>=10.0", "pillow-heif>=0.16"]
+
+[project.urls]
+Homepage = "https://github.com/wernjien/gulliver-tunnel"
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+gulliver = "gulliver_tunnel.cli:main"
+
+[tool.setuptools]
+packages = ["gulliver_tunnel"]
