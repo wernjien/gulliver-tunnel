@@ -176,3 +176,7 @@ gulliver E:\ -w 1920 -h 1080
 - **Supported images.** Gulliver Tunnel reads JPG, PNG, GIF, BMP, TIFF, WebP, ICO, PSD, AVIF and HEIC/HEIF (iPhone photos). For animated images and files with several pages, only the first frame is used.
 - **Skipped files.** Hidden files such as `.DS_Store` are skipped, and so are files that are not images. If you save into a folder inside the input folder, that folder is skipped, so earlier results aren't shrunk again.
 - **Problems.** If an image can't be read, Gulliver Tunnel shows `FAILED` next to its name and carries on with the rest. If your computer still runs out of memory, Gulliver Tunnel stops and suggests a lower `-j`, such as `-j 2`. Running it again replaces the images that were already saved.
+
+## Licence
+
+Gulliver Tunnel is free to use, change and share under the [MIT Licence](LICENSE).
