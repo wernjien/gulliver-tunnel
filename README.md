@@ -74,7 +74,7 @@ Original                     Result
 
 ## Choosing the size
 
-Use `-w` to set the maximum width and `-h` to set the maximum height, in pixels. You can give one of them or both. If you give neither, both are 2000.
+Use `-w` to set the maximum width and `-h` to set the maximum height, in pixels. You can give one of them or both. If you give neither, both are 1024.
 
 **Width and height.** Each image shrinks until it fits inside both limits, and its shape never changes. If the image's shape is different from your limits, the side that needs more shrinking sets the size. For example, a 4000×3000 image becomes 1440×1080, not 1920×1440.
 
@@ -98,7 +98,7 @@ Images that are already smaller than your limits keep their original size. Photo
 
 ## Cropping to fill the size
 
-By default, nothing is cut off, so an image can end up narrower or shorter than your limits. To fill your size instead, choose one of these crop options. Each one needs both `-w` and `-h`. If you give neither, the size is 2000×2000. The crop always keeps the middle of the image and cuts the same amount from both edges.
+By default, nothing is cut off, so an image can end up narrower or shorter than your limits. To fill your size instead, choose one of these crop options. Each one needs both `-w` and `-h`. If you give neither, the size is 1024×1024. The crop always keeps the middle of the image and cuts the same amount from both edges.
 
 **Crop to fill.** Use `--crop` to fill your size exactly. Each image shrinks until it covers both limits, and the part that sticks out is cut off. For example, a 4000×3000 image shrinks to 1920×1440, and then 180 pixels are cut from the top and from the bottom, which gives 1920×1080.
 
@@ -158,7 +158,7 @@ gulliver E:\ -w 1920 -h 1080
 | --- | --- |
 | `-w WIDTH` | Sets the maximum width in pixels. |
 | `-h HEIGHT` | Sets the maximum height in pixels. |
-| No `-w` or `-h` | Fits each image within 2000×2000. |
+| No `-w` or `-h` | Fits each image within 1024×1024. |
 | `--crop` | Fills the whole size and cuts off the parts that stick out. |
 | `--crop-width` | Shrinks to the height and cuts off the left and right if the image is too wide. |
 | `--crop-height` | Shrinks to the width and cuts off the top and bottom if the image is too tall. |

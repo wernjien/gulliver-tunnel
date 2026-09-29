@@ -65,8 +65,8 @@ def test_default_size_when_neither_given(tmp_path):
     make(src / "wide.png", size=(5000, 2500))
     make(src / "tall.png", size=(1000, 5000))
     assert run(src, tmp_path / "out") == 0
-    assert Image.open(tmp_path / "out" / "in" / "wide.jpg").size == (2000, 1000)
-    assert Image.open(tmp_path / "out" / "in" / "tall.jpg").size == (400, 2000)
+    assert Image.open(tmp_path / "out" / "in" / "wide.jpg").size == (1024, 512)
+    assert Image.open(tmp_path / "out" / "in" / "tall.jpg").size == (205, 1024)
 
 
 def test_width_alone_does_not_limit_height(tmp_path):
@@ -200,7 +200,7 @@ def test_crop_uses_default_size(tmp_path):
     src = tmp_path / "in"
     make(src / "a.png", size=(5000, 2500))
     run(src, tmp_path / "out", "--crop")
-    assert Image.open(tmp_path / "out" / "in" / "a.jpg").size == (2000, 2000)
+    assert Image.open(tmp_path / "out" / "in" / "a.jpg").size == (1024, 1024)
 
 
 def test_crop_after_exif_rotation(tmp_path):

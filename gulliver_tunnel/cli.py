@@ -15,7 +15,7 @@ from . import __version__
 from .paths import Job, find_images, pictures_dir, plan_outputs, remember_result, results_folder
 from .resize import FORMATS, Options, Result, process_image
 
-DEFAULT_SIZE = 2000  # used for both sides when neither -w nor -h is given
+DEFAULT_SIZE = 1024  # used for both sides when neither -w nor -h is given
 MEMORY_PER_JOB = 2 * 1024**3  # a big PNG, TIFF or HEIC can take hundreds of MB to decode
 
 
